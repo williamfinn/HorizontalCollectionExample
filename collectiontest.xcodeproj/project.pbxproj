@@ -16,6 +16,8 @@
 		8884A65224FD19870058E21A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8884A65024FD19870058E21A /* LaunchScreen.storyboard */; };
 		8884A65D24FD19880058E21A /* collectiontestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A65C24FD19880058E21A /* collectiontestTests.swift */; };
 		8884A66824FD19880058E21A /* collectiontestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A66724FD19880058E21A /* collectiontestUITests.swift */; };
+		8884A67724FD19F70058E21A /* labelcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A67524FD19F70058E21A /* labelcell.swift */; };
+		8884A67824FD19F70058E21A /* labelcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8884A67624FD19F70058E21A /* labelcell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		8884A66324FD19880058E21A /* collectiontestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectiontestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8884A66724FD19880058E21A /* collectiontestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectiontestUITests.swift; sourceTree = "<group>"; };
 		8884A66924FD19880058E21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8884A67524FD19F70058E21A /* labelcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = labelcell.swift; sourceTree = "<group>"; };
+		8884A67624FD19F70058E21A /* labelcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = labelcell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				8884A65024FD19870058E21A /* LaunchScreen.storyboard */,
 				8884A65324FD19870058E21A /* Info.plist */,
 				8884A64B24FD19840058E21A /* collectiontest.xcdatamodeld */,
+				8884A67524FD19F70058E21A /* labelcell.swift */,
+				8884A67624FD19F70058E21A /* labelcell.xib */,
 			);
 			path = collectiontest;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			files = (
 				8884A65224FD19870058E21A /* LaunchScreen.storyboard in Resources */,
 				8884A64F24FD19870058E21A /* Assets.xcassets in Resources */,
+				8884A67824FD19F70058E21A /* labelcell.xib in Resources */,
 				8884A64A24FD19840058E21A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +271,7 @@
 				8884A64724FD19840058E21A /* ViewController.swift in Sources */,
 				8884A64324FD19840058E21A /* AppDelegate.swift in Sources */,
 				8884A64524FD19840058E21A /* SceneDelegate.swift in Sources */,
+				8884A67724FD19F70058E21A /* labelcell.swift in Sources */,
 				8884A64D24FD19840058E21A /* collectiontest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
