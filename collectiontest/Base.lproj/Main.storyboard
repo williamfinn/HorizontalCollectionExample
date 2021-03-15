@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wS1-UM-mWe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Autosize-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="collectiontest" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vyg-lQ-hRd">
-                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="thu-sr-bDZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,21 +42,132 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vyg-lQ-hRd" secondAttribute="trailing" id="1Yw-3F-roA"/>
-                            <constraint firstItem="Vyg-lQ-hRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XQL-vt-ef0"/>
+                            <constraint firstItem="Vyg-lQ-hRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XQL-vt-ef0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vyg-lQ-hRd" secondAttribute="bottom" id="rO9-XH-D7C"/>
                             <constraint firstItem="Vyg-lQ-hRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uwe-f9-hcv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Autosize" id="bDe-9j-jeu"/>
                     <connections>
                         <outlet property="collectionView" destination="Vyg-lQ-hRd" id="8br-6U-Gkv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="87"/>
+            <point key="canvasLocation" x="46" y="378"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="Q2a-ei-L3e">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Os-Z8-v4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="uEJ-Rw-tTk" customClass="CalendarViewController" customModule="collectiontest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PpH-zc-rQp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tjv-9z-qFY">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IgE-4K-Ss9">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzL-rd-g6i">
+                                <rect key="frame" x="182" y="104" width="50" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMT-kv-upp">
+                                <rect key="frame" x="370.5" y="127" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xbk-Hm-0gE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tjv-9z-qFY" firstAttribute="leading" secondItem="xbk-Hm-0gE" secondAttribute="leading" id="ERS-Bo-iDV"/>
+                            <constraint firstItem="Tjv-9z-qFY" firstAttribute="top" secondItem="EMT-kv-upp" secondAttribute="bottom" id="J7W-Vg-UkM"/>
+                            <constraint firstItem="EMT-kv-upp" firstAttribute="trailing" secondItem="xbk-Hm-0gE" secondAttribute="trailing" constant="-8" id="JF7-7r-VIf"/>
+                            <constraint firstItem="xbk-Hm-0gE" firstAttribute="bottom" secondItem="Tjv-9z-qFY" secondAttribute="bottom" id="Q4I-qg-d43"/>
+                            <constraint firstItem="xbk-Hm-0gE" firstAttribute="trailing" secondItem="Tjv-9z-qFY" secondAttribute="trailing" id="Uxa-Fy-5vN"/>
+                            <constraint firstItem="DzL-rd-g6i" firstAttribute="top" secondItem="xbk-Hm-0gE" secondAttribute="top" constant="16" id="kqm-Od-Loo"/>
+                            <constraint firstItem="Tjv-9z-qFY" firstAttribute="top" secondItem="DzL-rd-g6i" secondAttribute="bottom" constant="16" id="trc-4T-wkI"/>
+                            <constraint firstItem="DzL-rd-g6i" firstAttribute="centerX" secondItem="PpH-zc-rQp" secondAttribute="centerX" id="xo5-4u-oGG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calendar" id="cVZ-i9-XTE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Tjv-9z-qFY" id="Dqt-TW-QdE"/>
+                        <outlet property="monthLabel" destination="EMT-kv-upp" id="Szh-G1-Gjd"/>
+                        <outlet property="topLabel" destination="DzL-rd-g6i" id="YqI-Es-d3H"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1297" y="378"/>
+        </scene>
+        <!--Autosize-->
+        <scene sceneID="5OM-jC-ewP">
+            <objects>
+                <navigationController id="oFQ-fh-JB1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Autosize" image="ruler" catalog="system" id="Y49-41-uqY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oon-2G-762">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Uiz-ab-zou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Luh-h8-wuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-311"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="0VV-nR-s6T">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sq-ue-3pJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="WYF-oz-vhp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="RQu-H0-euD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1v8-qp-gFK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uEJ-Rw-tTk" kind="relationship" relationship="rootViewController" id="xG6-DG-e2J"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1296" y="-311"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gO5-Mp-E5G">
+            <objects>
+                <tabBarController id="wS1-UM-mWe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ML5-SE-Daa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oFQ-fh-JB1" kind="relationship" relationship="viewControllers" id="Nda-nO-oue"/>
+                        <segue destination="WYF-oz-vhp" kind="relationship" relationship="viewControllers" id="vzR-eu-Vjt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mN-77-e52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="-1041"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="ruler" catalog="system" width="128" height="57"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
