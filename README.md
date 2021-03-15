@@ -1,4 +1,8 @@
 # HorizontalCollectionExample
+
+![](https://github.com/williamfinn/HorizontalCollectionExample/blob/main/51ta2k.gif)
+
+
 Tab 1: Example of autosizing horizontal collection view
 Tab 2: Example of how to make horizontal scrolling calendar
 
