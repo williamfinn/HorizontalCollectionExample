@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     let labels = ["sm" , "big", "bigger", "even bigger", "much much bigger", "very very very large"]
     let colors: [UIColor] = [.green, .red, .orange, .blue, .purple, .lightGray, .cyan]
@@ -16,25 +16,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpCollectionView()
+    }
+    
+    func setUpCollectionView() {
         collectionView.collectionViewLayout = layoutConfig()
-        collectionView.register(UINib(nibName: labelcell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: labelcell.reuseIdentifier)
-        collectionView.delegate = self
+        collectionView.register(UINib(nibName: LabelCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: LabelCell.reuseIdentifier)
+//        collectionView.delegate = self
         collectionView.dataSource = self
-    }
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return labels.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: labelcell.reuseIdentifier, for: indexPath) as! labelcell
-        cell.mainLabel.text = labels[indexPath.row]
-        cell.backgroundColor = colors[indexPath.row]
-        return cell
     }
     
     func layoutConfig() -> UICollectionViewCompositionalLayout {
@@ -50,4 +39,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 }
 
-
+extension ViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        labels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LabelCell.reuseIdentifier, for: indexPath) as! LabelCell
+        cell.mainLabel.text = labels[indexPath.row]
+        cell.backgroundColor = colors[indexPath.row]
+        return cell
+    }
+}

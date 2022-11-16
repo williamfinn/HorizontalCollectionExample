@@ -7,8 +7,9 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CalendarViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     
@@ -21,38 +22,54 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     var month: String?
     var selectedDate: Date?
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    let dateTool = DateTool()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpCollectionView()
+        getDates()
+    }
+    
+    private func getDates() {
+        dates = dateTool.datesRange(from: dateTool.getDate(str: start), to: dateTool.getDate(str: end))
+        collectionView.reloadData()
+        
+        let current = dateTool.getCurrent()
+        let first = dates.firstIndex(where: {$0 == current})
+        
+        if let f = first {
+            view.layoutIfNeeded()
+            collectionView.selectItem(at: IndexPath(row: f, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+            topLabelSet()
+        }
+    }
+    
+    private func topLabelSet() {
+        topLabel.text = dateTool.getTop(date: selectedDate ?? Date())
+    }
+    
+    private func setUpCollectionView() {
         collectionView.collectionViewLayout = layoutConfig()
         collectionView.register(UINib(nibName: DateCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: DateCell.reuseIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.allowsSelection = true
-
-        getDates()
     }
     
-    func getDates() {
-        self.dates = DateTool.current.datesRange(from: DateTool.current.getDate(str: start), to: DateTool.current.getDate(str: end))
-        self.collectionView.reloadData()
-        let current = DateTool.current.getCurrent()
-        print(current)
-        let first = dates.firstIndex { (it) -> Bool in
-            it == current
-        }
-        if let f = first {
-            view.layoutIfNeeded()
-            self.collectionView.selectItem(at: IndexPath(row: f, section: 0), animated: false, scrollPosition: .centeredHorizontally)
-            topLabelSet()
+    private func layoutConfig() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
+            let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(50), heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(50), heightDimension: .absolute(50))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            let section = NSCollectionLayoutSection(group: group)
+            section.orthogonalScrollingBehavior = .continuous
+            return section
         }
     }
-    
-    func topLabelSet() {
-        topLabel.text = DateTool.current.getTop(date: selectedDate ?? Date())
-    }
+}
 
+extension CalendarViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -63,11 +80,14 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DateCell.reuseIdentifier, for: indexPath) as! DateCell
-        cell.cellView()
-        cell.configureCell(date: dates[indexPath.row])
+        let date = dates[indexPath.row]
+        cell.dayLabel.text = dateTool.getDay(date: date)
+        cell.dayNumberLabel.text = dateTool.getNumber(date: date)
         return cell
     }
-    
+}
+
+extension CalendarViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedDate = dates[indexPath.row]
         self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -76,22 +96,10 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let date = dates[indexPath.row]
-        let cellMonth = DateTool.current.getMonth(date: date)
+        let cellMonth = dateTool.getMonth(date: date)
         if month != cellMonth {
             month = cellMonth
             monthLabel.text = month ?? ""
-        }
-    }
-    
-    func layoutConfig() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
-            let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(50), heightDimension: .fractionalHeight(1))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(50), heightDimension: .absolute(50))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-            let section = NSCollectionLayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .continuous
-            return section
         }
     }
 }

@@ -7,11 +7,8 @@
 
 import Foundation
 
-
-struct DateTool {
-    var formatter = DateFormatter()
-    
-    static let current = DateTool()
+class DateTool {
+    let formatter = DateFormatter()
     
     func getDay(date: Date) -> String {
         formatter.dateFormat = "E"
@@ -49,7 +46,6 @@ struct DateTool {
     func datesRange(from: Date, to: Date) -> [Date] {
         
         // credit for this code in: https://stackoverflow.com/questions/49387344/how-to-get-an-array-of-days-between-two-dates-in-swift
-        
         
         if from > to { return [Date]() }
 

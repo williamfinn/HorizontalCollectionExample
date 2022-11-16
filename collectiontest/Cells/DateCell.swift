@@ -23,14 +23,10 @@ class DateCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        cellView()
     }
     
-    func cellView() {
+    private func cellView() {
         self.contentView.layer.cornerRadius = 8
-    }
-    
-    func configureCell(date: Date) {
-        dayLabel.text = DateTool.current.getDay(date: date)
-        dayNumberLabel.text = DateTool.current.getNumber(date: date)
     }
 }

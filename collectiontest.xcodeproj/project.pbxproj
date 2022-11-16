@@ -15,13 +15,10 @@
 		8884A64524FD19840058E21A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A64424FD19840058E21A /* SceneDelegate.swift */; };
 		8884A64724FD19840058E21A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A64624FD19840058E21A /* ViewController.swift */; };
 		8884A64A24FD19840058E21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8884A64824FD19840058E21A /* Main.storyboard */; };
-		8884A64D24FD19840058E21A /* collectiontest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8884A64B24FD19840058E21A /* collectiontest.xcdatamodeld */; };
 		8884A64F24FD19870058E21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8884A64E24FD19870058E21A /* Assets.xcassets */; };
 		8884A65224FD19870058E21A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8884A65024FD19870058E21A /* LaunchScreen.storyboard */; };
-		8884A65D24FD19880058E21A /* collectiontestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A65C24FD19880058E21A /* collectiontestTests.swift */; };
-		8884A66824FD19880058E21A /* collectiontestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A66724FD19880058E21A /* collectiontestUITests.swift */; };
-		8884A67724FD19F70058E21A /* labelcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A67524FD19F70058E21A /* labelcell.swift */; };
-		8884A67824FD19F70058E21A /* labelcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8884A67624FD19F70058E21A /* labelcell.xib */; };
+		8884A67724FD19F70058E21A /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884A67524FD19F70058E21A /* LabelCell.swift */; };
+		8884A67824FD19F70058E21A /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8884A67624FD19F70058E21A /* LabelCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,18 +48,13 @@
 		8884A64424FD19840058E21A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8884A64624FD19840058E21A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8884A64924FD19840058E21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8884A64C24FD19840058E21A /* collectiontest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = collectiontest.xcdatamodel; sourceTree = "<group>"; };
 		8884A64E24FD19870058E21A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8884A65124FD19870058E21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8884A65324FD19870058E21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8884A65824FD19870058E21A /* collectiontestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectiontestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8884A65C24FD19880058E21A /* collectiontestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectiontestTests.swift; sourceTree = "<group>"; };
-		8884A65E24FD19880058E21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8884A66324FD19880058E21A /* collectiontestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectiontestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8884A66724FD19880058E21A /* collectiontestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectiontestUITests.swift; sourceTree = "<group>"; };
-		8884A66924FD19880058E21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8884A67524FD19F70058E21A /* labelcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = labelcell.swift; sourceTree = "<group>"; };
-		8884A67624FD19F70058E21A /* labelcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = labelcell.xib; sourceTree = "<group>"; };
+		8884A67524FD19F70058E21A /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		8884A67624FD19F70058E21A /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +85,8 @@
 		8821A9FB25FFD04900D787B4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8884A67524FD19F70058E21A /* labelcell.swift */,
-				8884A67624FD19F70058E21A /* labelcell.xib */,
+				8884A67524FD19F70058E21A /* LabelCell.swift */,
+				8884A67624FD19F70058E21A /* LabelCell.xib */,
 				8821A9F425FFD00700D787B4 /* DateCell.swift */,
 				8821A9F525FFD00700D787B4 /* DateCell.xib */,
 			);
@@ -122,8 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				8884A64124FD19840058E21A /* collectiontest */,
-				8884A65B24FD19880058E21A /* collectiontestTests */,
-				8884A66624FD19880058E21A /* collectiontestUITests */,
 				8884A64024FD19840058E21A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,27 +140,8 @@
 				8884A64E24FD19870058E21A /* Assets.xcassets */,
 				8884A65024FD19870058E21A /* LaunchScreen.storyboard */,
 				8884A65324FD19870058E21A /* Info.plist */,
-				8884A64B24FD19840058E21A /* collectiontest.xcdatamodeld */,
 			);
 			path = collectiontest;
-			sourceTree = "<group>";
-		};
-		8884A65B24FD19880058E21A /* collectiontestTests */ = {
-			isa = PBXGroup;
-			children = (
-				8884A65C24FD19880058E21A /* collectiontestTests.swift */,
-				8884A65E24FD19880058E21A /* Info.plist */,
-			);
-			path = collectiontestTests;
-			sourceTree = "<group>";
-		};
-		8884A66624FD19880058E21A /* collectiontestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8884A66724FD19880058E21A /* collectiontestUITests.swift */,
-				8884A66924FD19880058E21A /* Info.plist */,
-			);
-			path = collectiontestUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +249,7 @@
 			files = (
 				8884A65224FD19870058E21A /* LaunchScreen.storyboard in Resources */,
 				8884A64F24FD19870058E21A /* Assets.xcassets in Resources */,
-				8884A67824FD19F70058E21A /* labelcell.xib in Resources */,
+				8884A67824FD19F70058E21A /* LabelCell.xib in Resources */,
 				8884A64A24FD19840058E21A /* Main.storyboard in Resources */,
 				8821A9F725FFD00700D787B4 /* DateCell.xib in Resources */,
 			);
@@ -311,8 +282,7 @@
 				8884A64324FD19840058E21A /* AppDelegate.swift in Sources */,
 				8884A64524FD19840058E21A /* SceneDelegate.swift in Sources */,
 				8821AA0225FFD39600D787B4 /* DateTool.swift in Sources */,
-				8884A67724FD19F70058E21A /* labelcell.swift in Sources */,
-				8884A64D24FD19840058E21A /* collectiontest.xcdatamodeld in Sources */,
+				8884A67724FD19F70058E21A /* LabelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8884A65D24FD19880058E21A /* collectiontestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8884A66824FD19880058E21A /* collectiontestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,19 +613,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8884A64B24FD19840058E21A /* collectiontest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8884A64C24FD19840058E21A /* collectiontest.xcdatamodel */,
-			);
-			currentVersion = 8884A64C24FD19840058E21A /* collectiontest.xcdatamodel */;
-			path = collectiontest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8884A63724FD19840058E21A /* Project object */;
 }
